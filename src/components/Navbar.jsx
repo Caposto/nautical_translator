@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unknown-property */
-/* eslint no-use-before-define: 0 */  // --> OFF
-
 function Navbar() {
   return (
     <div className='bg-cyan-300 w-screen h-32 flex flex-col items-between justify-center '>
