@@ -3,7 +3,7 @@
 
 import Simulator from './components/Simulator';
 import Navbar from './components/Navbar';
-import TranslateWrapper  from './components/TranslateWrapper';
+import Translater from './components/Translater';
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <div className='bg-blue-1 w-full h-full overflow-hidden'> 
       <Navbar />
       <Simulator />
-      <TranslateWrapper />
+      <Translater />
     </div>
   )
 }
