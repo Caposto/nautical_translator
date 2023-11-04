@@ -1,6 +1,7 @@
 import {Canvas} from "@react-three/fiber";
 import {OrbitControls} from "@react-three/drei";
 import Boat from "./Boat";
+import Ocean from "./Ocean";
 
 function Simulator() {
   return (
@@ -13,9 +14,10 @@ function Simulator() {
 					}}>
 					<color attach="background" args={["#ececec"]}/>
 					<OrbitControls/> 
-					<ambientLight intensity={0.5} />
-					<directionalLight position={[0, 0, 5]} intensity={1} />
-					<Boat scale={0.01}/>
+					<ambientLight intensity={1} />
+					<directionalLight position={[0, 0, 5]} intensity={2} />
+					<Boat scale={0.01} scenePosition={[0, 0.5, 0]}/>
+					<Ocean />
 					<gridHelper />
 					<axesHelper args={[5]}/>
 				</Canvas>
