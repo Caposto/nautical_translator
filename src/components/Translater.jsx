@@ -1,5 +1,5 @@
 import TermCard from "./TermCard";
-import Arrow from "../assets/arrow.svg";
+import Arrow from "../assets/Arrow.svg";
 import { useState } from "react";
 
 function Translater() {
