@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint no-use-before-define: 0 */  // --> OFF
 
 import './App.css'
