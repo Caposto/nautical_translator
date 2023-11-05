@@ -19,7 +19,7 @@ function Translater() {
   ]
 
   const [partObjects, setPartObjects] = useState([...defaultSelectOptions]);
-  const [selected, setSelected] = useState(defaultSelectOptions[0])
+  const [selected, setSelected] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,13 +35,13 @@ function Translater() {
   }, [])
 
 	const handleChange = (event) => {
-    const currentOption = partObjects.filter(option => option.name === event.target.value)
+    const currentOption = partObjects.filter(option => option.name === event)
 		setSelected(currentOption[0]);
 	}
 
 	return (
 		<div className="w-full flex justify-center items-center p-4">
-			<TermCard title="Nautical Term" updateDefinition={handleChange} options={partObjects} />
+			<TermCard title="Nautical Term" updateDefinition={handleChange} options={partObjects} selected={selected} />
 			<img src={Arrow} alt="Arrow" />
 			<TranslationCard title="Translation" definition={selected}/>
 		</div>
