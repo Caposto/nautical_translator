@@ -25,7 +25,7 @@ function Translater() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:3500/request')
+      const response = await fetch('https://nautical-translator-server.onrender.com/request')
       if (!response.ok) {
         console.log('Problem with fetch.')
       }
