@@ -17,7 +17,7 @@ function Simulator() {
 				<OrbitControls minDistance={5} maxDistance={30} maxPolarAngle={Math.PI / 2 - 0.1} /> 
 				<ambientLight intensity={1} />
 				<directionalLight position={[0, 0, 5]} intensity={2} />
-				<Boat scale={0.01} scenePosition={[0, 0.75, 3]}/>
+				<Boat scale={0.01} scenePosition={[0, 0.5, 3]}/>
 				<Ocean />
 			</Canvas>
 			</div>

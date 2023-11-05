@@ -9,7 +9,7 @@ export default function Boat({scale, scenePosition}) {
 
   return (
     <group ref={groupRef} position={scenePosition} rotation={[rotationInRadians, 0, rotationInRadians * 2]}>
-      <BoatPart url='src/assets/Hull.glb' scale={scale} name="Hull" id="hull"/>
+      <BoatPart url='src/assets/Hull.glb' scale={scale} name="Hull" id="hull" color="#ff0000"/>
       <BoatPart url='src/assets/Keel.glb' scale={scale} name="Keel" id="keel"/>
       <BoatPart url='src/assets/Rudder.glb' scale={scale} name="Rudder" id="rudder"/>
       <BoatPart url='src/assets/Mast.glb' scale={scale} name="Mast" id="mast"/>
