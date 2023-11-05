@@ -5,7 +5,7 @@ import Boat from './Boat';
 import Ocean from './Ocean';
 
 function Simulator() {
-	const [activeParts, setActiveParts] = useState(new Set()); // Hashmap of part names
+	const [activeParts, setActiveParts] = useState(new Set());
 
 	// Since sets are mutable have to add additional add/remove functions to update state
 	const editPart = part => {
