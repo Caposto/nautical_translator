@@ -7,7 +7,7 @@ function Simulator() {
 
   return (
 	<div className="w-full h-[525px] flex items-center justify-center">
-		<div className='relative w-5/6 h-[500px] drop-shadow-2xl'>         
+		<div className='relative w-5/6 h-[500px] drop-shadow-2xl'> 
 			<div className='h-full'>
 			<Canvas camera={{
 				position: [0, 10, 18],
