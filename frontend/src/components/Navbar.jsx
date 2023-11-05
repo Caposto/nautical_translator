@@ -11,10 +11,9 @@ function Navbar() {
 			alt="" 
 			width={80} 
 			height={80}
-			// onClick={() => setShowInstructions(!showInstructions)} 
 		/>
 	);
-	const content = 'The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I&apos;m never giving up, I\'m just getting started. I&apos;m up to something. Fan luv';
+	const content = 'Welcome to Nauti(cal) Phrases! In order to navigate around the site try clicking any of the buttons on the side of the 3D viewer, each of these buttons will show you a different part of the boat. You’re also able to move around the 3D viewer with your right click, scroll wheel and left click. If you want to see the normal english translation of the words select them in the list translation below. Happy Learning! ⛵';
 
   return (
     <div className='bg-transparent w-screen h-24 flex flex-row items-center justify-between '>
@@ -26,7 +25,7 @@ function Navbar() {
 			{false && 
 				<div alt="message-bubble" className='flex items-center'>
 					<div class="flex items-center justify-end">
-						<div class="bg-blue-200 p-2 rounded-lg text-sm w-64">
+						<div class="bg-blue-200 p-2 rounded-lg text-md w-64">
 							Learn all about Nautical Terms via the defintions and visualzation below!
 						</div>
 						<div class="w-3 overflow-hidden ">
@@ -35,7 +34,7 @@ function Navbar() {
 					</div>
 				</div>
 			}
-			<DialogButton buttonText={fish} content={content} modalTitle='Testing' />		
+			<DialogButton buttonText={fish} content={content} modalTitle='Greetings! 👋' />		
 			</div>
     </div>
   )

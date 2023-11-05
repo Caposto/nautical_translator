@@ -5,6 +5,7 @@ import Boat from './Boat';
 import Ocean from './Ocean';
 import { Button } from "@material-tailwind/react";
 import Sides from './Sides';
+import wheel from '../assets/wheel.png';
 
 function Simulator() {
 	const [activePart, setActivePart] = useState(null);
@@ -34,6 +35,13 @@ function Simulator() {
 		setStartboardVisibility(!startboardVisibility);
 	}
 
+	const buttonText = text =>(
+		<span className="flex flex-col justify-center items-center">
+			<span className="font-sans">{text}</span>
+			<img src={wheel} alt="wheel" className="w-8 h-8"/>
+		</span>
+	)
+
   return (
 		<div className="w-full h-[500px] my-4 flex items-center justify-center">
 			<div className="flex flex-col h-full justify-around w-48">
@@ -62,9 +70,9 @@ function Simulator() {
 				</div>
 			</div>
 			<div className="flex flex-col h-full w-48">
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setStartboardVisibilityFunc}>Starboard</Button>
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setSternVisibilityFunc}>Stern</Button>
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setPortVisibilityFunc}>Port</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setStartboardVisibilityFunc}>{buttonText('Starboard')}</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setSternVisibilityFunc}>{buttonText('Stern')}</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setPortVisibilityFunc}>{buttonText('Port')}</Button>
 			</div>
 		</div>
   )
