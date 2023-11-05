@@ -3,10 +3,9 @@ const express = require('express')
 const cors = require('cors')
 const requestRoutes = require('./routes/requestRoutes')
 const health = require('./routes/health')
-const corsOptions = require('./config/corsOptions')
 const app = express();
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use('/request', requestRoutes);
 app.use('/health', health);
