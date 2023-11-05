@@ -30,7 +30,7 @@ export default function Boat({scale, scenePosition, activeParts}) {
       // Stop the animation loop if the component unmounts.
       cancelAnimationFrame(animate);
     };
-  }, [scenePosition]);
+  }, [scenePosition, rotationInRadians]);
 
   return (
     <group ref={groupRef} position={scenePosition} rotation={[rotationInRadians, 0, rotationInRadians * 2]}>
