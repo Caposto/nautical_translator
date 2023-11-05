@@ -9,7 +9,7 @@ function Simulator() {
 	const [activeParts, setActiveParts] = useState(new Set());
 
 	// Since sets are mutable have to add additional add/remove functions to update state
-	const editPart = part => {
+	const editPart = (part) => {
 		activeParts.clear();
 		setActiveParts(previousState => new Set([...previousState, part]));
 	}
@@ -27,9 +27,10 @@ function Simulator() {
 			<div className='relative w-[675px] h-[500px] drop-shadow-2xl'> 
 				<div className='h-full'>
 				<Canvas camera={{
-					position: [0, 10, 18],
+					position: [0, 16, 24],
 					fov: 45,
 				}}>
+				
 					<color attach="background" args={["#ececec"]}/>
 					<OrbitControls minDistance={5} maxDistance={30} maxPolarAngle={Math.PI / 2 - 0.2} /> 
 					<ambientLight intensity={1} />

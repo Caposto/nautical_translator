@@ -25,15 +25,13 @@ export default function Boat({scale, scenePosition, activeParts}) {
     // Start the animation loop.
     animate();
 
-    // Cleanup function
     return () => {
-      // Stop the animation loop if the component unmounts.
       cancelAnimationFrame(animate);
     };
   }, [scenePosition, rotationInRadians]);
 
   return (
-    <group ref={groupRef} position={scenePosition} rotation={[rotationInRadians, 0, rotationInRadians * 2]}>
+    <group ref={groupRef} position={scenePosition} rotation={[rotationInRadians, 0, rotationInRadians]}>
       <BoatPart url='src/assets/Hull.glb' scale={scale} name="Hull" id="hull" color="#406882" highlightColor="#FF0000" activeParts={activeParts}/>
       <BoatPart url='src/assets/Keel.glb' scale={scale} name="Keel" id="keel" color="#8B4513" highlightColor="#FF0000" activeParts={activeParts}/>
       <BoatPart url='src/assets/Rudder.glb' scale={scale} name="Rudder" id="rudder" color="#5C4033" highlightColor="#FF0000" activeParts={activeParts}/>
