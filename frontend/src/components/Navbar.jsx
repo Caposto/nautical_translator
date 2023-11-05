@@ -21,7 +21,12 @@ function Navbar() {
 				<a href="./" class="flex items-center">
 					<img src={Logo} class="w-72 mr-3" alt="Nauti phrases" />
 				</a>	
-				<p className="text-sm font-normal">Shawn, Christian, Rumi, Justin</p>
+				<p className="text-sm font-normal">Created by
+					<span> <a href="https://shawnaviles.com" className='text-gray-100 underline' rel="noreferrer" target='_blank'>Shawn</a>, </span>
+					<span><a href="https://github.com/Caposto" className='text-gray-100 underline' rel="noreferrer" target='_blank'>Christian</a>, </span>
+					<span><a href="https://rumilog.github.io/site/" className='text-gray-100 underline' rel="noreferrer" target='_blank'>Rumi</a>, </span>
+					<span><a href="https://github.com/j-ferber" className='text-gray-100 underline' rel="noreferrer" target='_blank'>Justin</a></span> 
+				</p>
 			</div> 
 			<div className="pr-10 flex flex-row"> 
 				<DialogButton buttonText={fish} modalTitle='Greetings! 👋' />		

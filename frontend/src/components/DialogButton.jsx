@@ -15,7 +15,7 @@ function DialogButton({ buttonText, modalTitle }) {
  
   return (
     <>
-      <Button onClick={handleOpen} variant="gradient" className='!p-0 !m-0 !rounded-full'>
+      <Button onClick={handleOpen} variant="gradient" className='!p-0 !m-0 !rounded-full' alt='Click for Instructions' title="Click Me!">
         {buttonText}
       </Button>
       <Dialog open={open} handler={handleOpen}>
