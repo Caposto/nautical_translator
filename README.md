@@ -1,15 +1,43 @@
-# Minimum Features:
-- A drop down menu of common nautical terms. Users click these, maybe import values (50 knots) and the english/common translation is given (50 miles per hour)
-- Isometric view of a 3D boat
-- Zoom to parts. Users are able to click on certain boats and zoom in on them. List of parts of a sailboat
-Boat reaction - instructions like “hard to port” or “starboard” cause a reaction in the boat
-- Highlight bar (in replace of a navbar) - Price of Tuna, most recent piracy incident, deals on boats
+# Nautical Translator
+A website that serves as an educational platform by providing an interactice display for learning different Nautical Terms. Hack NJIT 2023.
 
-# Tech Stack
-- React/Three.js
-- Kintone - Database used to store definitions of nautical terms and Highlight Bar 
-- TailwindCSS
+## Setup
+1. Clone the repository
 
-# Resources
-Setup Guide: https://dev.to/saloship/base-setup-for-3-d-web-dev-30h5
-Kintone: https://kintone.dev/en/quickstart/
+2. Activate the server
+```
+cd backend
+npm install
+npm run dev
+```
+
+3. In a separate terminal, start the frontend
+```
+cd frontend
+npm install
+npm run dev
+```
+
+The website should now be running locally at http://localhost:5173/
+
+## Main Features:
+- An interactive 3D display that let's the user highlight certain parts of a sailboat
+- A translation feature that outputs the definition of different nautical terms stored on a Kintone App
+
+## Tech Stack
+- [React](https://react.dev/)
+- [three.js](https://threejs.org/) / [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
+- [TailwindCSS](https://tailwindcss.com/docs/installation)
+- [Express](https://expressjs.com/)
+- [Kintone](https://www.kintone.com/en-us/)
+
+## Designs
+[Figma Wireframes/Mockups](https://www.figma.com/file/30T0hq4FHU6iKN7LNjx2bR/Nautical-Boat-Simulator?type=design&node-id=0%3A1&mode=design&t=Styx0ozvdvjHkFBV-1)
+
+## Resources
+- [Setting up three.js, Tailwind, React in Vite](https://dev.to/saloship/base-setup-for-3-d-web-dev-30h5)
+- [Kintone Quickstart](https://kintone.dev/en/quickstart/)
+- ![alt text](https://intlreg.org/wp-content/uploads/2019/10/048-port-starboard-left-right.jpg)
+- [Water Shader](https://threejs.org/examples/webgl_water.html)
+- [Ocean Water Shader](https://threejs.org/examples/webgl_shaders_ocean.html)
+- [Different Parts of a Sailboat](https://www.boatsetter.com/boating-resources/parts-of-a-sailboat#:~:text=The%20basic%20sailing%20boat%20is,the%20backstay%2C%20and%20the%20forestay)

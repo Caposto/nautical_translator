@@ -4,9 +4,13 @@ import { OrbitControls, Sky } from '@react-three/drei';
 import Boat from './Boat';
 import Ocean from './Ocean';
 import { Button } from "@material-tailwind/react";
+import Sides from './Sides';
 
 function Simulator() {
 	const [activePart, setActivePart] = useState(null);
+	const [portVisibility, setPortVisibility] = useState(false);
+	const [startboardVisibility, setStartboardVisibility] = useState(false);
+	const [sternVisibility, setSternVisibility] = useState(false);
 
 	// Since sets are mutable have to add additional add/remove functions to update state
 	const editPart = part => {
@@ -16,6 +20,18 @@ function Simulator() {
 		}
 		// turn off if the same part is clicked twice
 		setActivePart(part);
+	}
+
+	const setPortVisibilityFunc = () => {
+		setPortVisibility(!portVisibility);
+	}
+
+	const setSternVisibilityFunc = () => {
+		setSternVisibility(!sternVisibility);
+	}
+
+	const setStartboardVisibilityFunc = () => {
+		setStartboardVisibility(!startboardVisibility);
 	}
 
   return (
@@ -31,24 +47,24 @@ function Simulator() {
 			<div className='relative w-[675px] h-[500px] drop-shadow-2xl'> 
 				<div className='h-full'>
 				<Canvas camera={{
-					position: [0, 10, 18],
+					position: [0, 16, 30],
 					fov: 45,
 				}}>
 					<color attach="background" args={["#ececec"]}/>
-					<OrbitControls minDistance={5} maxDistance={30} maxPolarAngle={Math.PI / 2 - 0.2} /> 
+					<OrbitControls minDistance={5} maxDistance={40} maxPolarAngle={Math.PI / 2 - 0.2} /> 
 					<ambientLight intensity={1} />
 					<directionalLight position={[0, 0, 5]} intensity={2} />
 					<Boat scale={0.01} scenePosition={[0, 0.5, 3]} activePart={activePart}/>
+					<Sides center={[0, 0.5, 3]} portVisibility={portVisibility} sternVisibility={sternVisibility} startboardVisibility={startboardVisibility}/>
 					<Ocean />
 					<Sky scale = {1000} sunPosition = {[500,150,-1000]} turbidity={0.1} />
 				</Canvas>
 				</div>
 			</div>
 			<div className="flex flex-col h-full w-48">
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Starboard</Button>
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Stern</Button>
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Port</Button>
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Forward</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setStartboardVisibilityFunc}>Starboard</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setSternVisibilityFunc}>Stern</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setPortVisibilityFunc}>Port</Button>
 			</div>
 		</div>
   )
