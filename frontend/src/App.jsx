@@ -10,7 +10,7 @@ function App() {
     // i.e user selects "hull", the camera should lookAt the hull and change hull's mesh material to highlight it
     // Only select user inputs are acted on in the Boat Context - see Boat.jsx for the 6 parts
   return (
-    <div className='w-full h-full overflow-hidden'> 
+    <div className='w-full h-full overflow-hidden bg-gradient-to-b from-blue-500 to-white'> 
       <Navbar />
       <BoatContext.Provider value={Boat}>
         <Simulator />

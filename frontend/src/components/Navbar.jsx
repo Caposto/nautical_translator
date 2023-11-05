@@ -17,7 +17,7 @@ function Navbar() {
 	const content = 'The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I&apos;m never giving up, I\'m just getting started. I&apos;m up to something. Fan luv';
 
   return (
-    <div className='bg-gradient-to-b from-blue-600 to-white w-screen h-24 flex flex-row items-center justify-between '>
+    <div className='bg-transparent w-screen h-24 flex flex-row items-center justify-between '>
 		<div className="pl-10">
 			<h1 className="text-4xl font-extrabold">Nauti Words</h1>
 			<p className="text-sm font-normal">Shawn, Christian, Rumi, Justin</p>
