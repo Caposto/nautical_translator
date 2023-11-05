@@ -5,8 +5,8 @@ import Ocean from "./Ocean";
 
 function Simulator() {
   return (
-	<div className="w-full h-[450px] flex items-center justify-center">
-		<div className='bg-indigo-100 relative w-3/4 h-96'> 
+	<div className="w-full h-[525px] flex items-center justify-center">
+		<div className='relative w-5/6 h-[500px] drop-shadow-2xl'> 
 			<div className='h-full'>
 				<Canvas camera = {{
 					position: [0,10,18],
