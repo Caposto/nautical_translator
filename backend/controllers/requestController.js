@@ -5,8 +5,7 @@ const getAll = async (req, res) => {
       method: 'GET', // The method is GET
       headers: {
         'X-Cybozu-API-Token': process.env.KINTONE_TOKEN // Setting the header with your API token
-      },
-      mode: 'no-cors'
+      }
     })
     const jsonResponse = await response.json()
     data.push({
