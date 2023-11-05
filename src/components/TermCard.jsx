@@ -13,7 +13,6 @@ function TermCard({ title, options, term = false, updateDefinition, definition }
 				:
 				<p className="text-md bg-white w-full p-2 rounded-sm">{definition}</p>	
 			}
-						
 		</div>
 	)
 }
