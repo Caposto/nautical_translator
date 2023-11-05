@@ -1,17 +1,29 @@
-import { useState } from 'react';
+// import { useState } from 'react';
+import DialogButton from './DialogButton';
 import scuba_fish_swimming4 from '../assets/scuba_fish_swimming4.gif';
 
 function Navbar() {
-	const [showInstructions, setShowInstructions] = useState(false);
+	// const [showInstructions, setShowInstructions] = useState(false);
+	const fish = (
+		<img 
+			src={scuba_fish_swimming4} 
+			className='w-[80px] h-[80px] bg-cyan-100 rounded-full border cursor-pointer hover:scale-x transform transition duration-y'
+			alt="" 
+			width={80} 
+			height={80}
+			// onClick={() => setShowInstructions(!showInstructions)} 
+		/>
+	);
+	const content = 'The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I&apos;m never giving up, I\'m just getting started. I&apos;m up to something. Fan luv';
 
   return (
     <div className='bg-gradient-to-b from-blue-600 to-white w-screen h-24 flex flex-row items-center justify-between '>
 		<div className="pl-10">
-			<h1 className="text-3xl font-extrabold">Jib Jargon</h1>
-			<p className="text-sm font-normal">Shawn, Christian, Rumi, J-Hat</p>
+			<h1 className="text-4xl font-extrabold">Nauti Words</h1>
+			<p className="text-sm font-normal">Shawn, Christian, Rumi, Justin</p>
 		</div> 
 		<div className="pr-10 flex flex-row"> 
-			{showInstructions && 
+			{false && 
 				<div alt="message-bubble" className='flex items-center'>
 					<div class="flex items-center justify-end">
 						<div class="bg-blue-200 p-2 rounded-lg text-sm w-64">
@@ -23,14 +35,7 @@ function Navbar() {
 					</div>
 				</div>
 			}
-			<img 
-				src={scuba_fish_swimming4} 
-				className='w-[80px] h-[80px] bg-cyan-100 rounded-full border cursor-pointer hover:scale-x transform transition duration-y'
-				alt="" 
-				width={80} 
-				height={80}
-				onClick={() => setShowInstructions(!showInstructions)} 
-			/>
+			<DialogButton buttonText={fish} content={content} modalTitle='Testing' />		
 			</div>
     </div>
   )
