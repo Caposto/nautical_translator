@@ -8,6 +8,9 @@ import Sides from './Sides';
 
 function Simulator() {
 	const [activePart, setActivePart] = useState(null);
+	const [portVisibility, setPortVisibility] = useState(false);
+	const [startboardVisibility, setStartboardVisibility] = useState(false);
+	const [sternVisibility, setSternVisibility] = useState(false);
 
 	// Since sets are mutable have to add additional add/remove functions to update state
 	const editPart = part => {
@@ -17,6 +20,18 @@ function Simulator() {
 		}
 		// turn off if the same part is clicked twice
 		setActivePart(part);
+	}
+
+	const setPortVisibilityFunc = () => {
+		setPortVisibility(!portVisibility);
+	}
+
+	const setSternVisibilityFunc = () => {
+		setSternVisibility(!sternVisibility);
+	}
+
+	const setStartboardVisibilityFunc = () => {
+		setStartboardVisibility(!startboardVisibility);
 	}
 
   return (
@@ -40,16 +55,16 @@ function Simulator() {
 					<ambientLight intensity={1} />
 					<directionalLight position={[0, 0, 5]} intensity={2} />
 					<Boat scale={0.01} scenePosition={[0, 0.5, 3]} activePart={activePart}/>
-					<Sides center={[0, 0.5, 3]}/>
+					<Sides center={[0, 0.5, 3]} portVisibility={portVisibility} sternVisibility={sternVisibility} startboardVisibility={startboardVisibility}/>
 					<Ocean />
 					<Sky scale = {1000} sunPosition = {[500,150,-1000]} turbidity={0.1} />
 				</Canvas>
 				</div>
 			</div>
 			<div className="flex flex-col h-full w-48">
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Starboard</Button>
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Stern</Button>
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Port</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setStartboardVisibilityFunc}>Starboard</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setSternVisibilityFunc}>Stern</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setPortVisibilityFunc}>Port</Button>
 				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Forward</Button>
 			</div>
 		</div>
