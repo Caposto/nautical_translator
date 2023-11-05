@@ -1,10 +1,36 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import BoatPart from "./BoatPart";
 
 export default function Boat({scale, scenePosition, activeParts}) {
   const groupRef = useRef();
+  const rotationInRadians = 90 * (Math.PI / 180);
 
-  const rotationInRadians = 90 * (Math.PI / 180)
+  useEffect(() => {
+    const animate = () => {
+      // Calculate the new Y position based on a sine wave.
+      const newY = scenePosition[1] + Math.sin(Date.now() * 0.001) * 0.2; // You can adjust the amplitude and speed as needed.
+      
+      // Calculate a slight rotation around the X-axis.
+      const newRotation = rotationInRadians + Math.sin(Date.now() * 0.001) * 0.05; // Adjust the rotation speed as needed.
+
+      // Update the group's position and rotation.
+      groupRef.current.position.y = newY;
+      groupRef.current.rotation.x = newRotation;
+      groupRef.current.rotation.z = newRotation;
+
+      // Request the next animation frame.
+      requestAnimationFrame(animate);
+    };
+
+    // Start the animation loop.
+    animate();
+
+    // Cleanup function
+    return () => {
+      // Stop the animation loop if the component unmounts.
+      cancelAnimationFrame(animate);
+    };
+  }, [scenePosition]);
 
   return (
     <group ref={groupRef} position={scenePosition} rotation={[rotationInRadians, 0, rotationInRadians * 2]}>
