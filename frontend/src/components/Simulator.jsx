@@ -10,7 +10,14 @@ function Simulator() {
 
 	// Since sets are mutable have to add additional add/remove functions to update state
 	const editPart = part => {
+		console.log(part, activeParts, activeParts.has(part));
+		if (activeParts.has(part)) {
+			activeParts.clear();
+			setActiveParts(previousState => new Set([...previousState]));
+			return;
+		}
 		activeParts.clear();
+		// turn off if the same part is clicked twice
 		setActiveParts(previousState => new Set([...previousState, part]));
 	}
 
