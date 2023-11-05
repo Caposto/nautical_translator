@@ -12,9 +12,13 @@ function TranslationCard({ title, definition }) {
         <Typography variant='h4' className='font-courgette'>
           {title}:
         </Typography>
-        <Typography className='font-courgette'>
+        <Typography className='font-courgette flex flex-col'>
           {definition ? 
-            definition.definition :
+            <>
+              <span className='text-xs text-gray-500 font-sans'>{definition.phonetic}</span>
+              <span>{definition.definition}</span>
+            </>
+            :
             <span className='text-gray-500'>Select a nautical term.</span>
           }
         </Typography>
