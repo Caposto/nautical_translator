@@ -34,7 +34,7 @@ function Translater() {
     }
 
     fetchData()
-  }, [partObjects])
+  }, [])
 
 	const handleChange = (event) => {
     const currentOption = partObjects.filter(option => option.name === event)
