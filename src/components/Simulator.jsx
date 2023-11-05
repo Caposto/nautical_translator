@@ -2,18 +2,19 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Boat from './Boat';
 import Ocean from './Ocean';
+import { Button } from "@material-tailwind/react";
 
 function Simulator() {
 
   return (
 	<div className="w-full h-[500px] my-4 flex items-center justify-center">
 		<div className="flex flex-col h-full justify-around">
-			<button className='flex flex-grow justify-center items-center px-4 py-3 bg-blue-100 m-3 rounded-lg border-2 border-blue-800 text-lg font-bold'>Words</button>
-			<button className='flex flex-grow justify-center items-center px-4 py-3 bg-blue-100 m-3 rounded-lg border-2 border-blue-800 text-lg font-bold'>Words</button>
-			<button className='flex flex-grow justify-center items-center px-4 py-3 bg-blue-100 m-3 rounded-lg border-2 border-blue-800 text-lg font-bold'>Words</button>
-			<button className='flex flex-grow justify-center items-center px-4 py-3 bg-blue-100 m-3 rounded-lg border-2 border-blue-800 text-lg font-bold'>Words</button>
-			<button className='flex flex-grow justify-center items-center px-4 py-3 bg-blue-100 m-3 rounded-lg border-2 border-blue-800 text-lg font-bold'>Words</button>
-			<button className='flex flex-grow justify-center items-center px-4 py-3 bg-blue-100 m-3 rounded-lg border-2 border-blue-800 text-lg font-bold'>Words</button>
+			<Button className='bg-blue-600 text-white flex-grow m-3 text-lg'>Words</Button>
+			<Button className='bg-blue-600 text-white flex-grow m-3 text-lg'>Words</Button>
+			<Button className='bg-blue-600 text-white flex-grow m-3 text-lg'>Words</Button>
+			<Button className='bg-blue-600 text-white flex-grow m-3 text-lg'>Words</Button>
+			<Button className='bg-blue-600 text-white flex-grow m-3 text-lg'>Words</Button>
+			<Button className='bg-blue-600 text-white flex-grow m-3 text-lg'>Words</Button>
 		</div>
 		<div className='relative w-[675px] h-[500px] drop-shadow-2xl'> 
 			<div className='h-full'>
@@ -31,8 +32,8 @@ function Simulator() {
 			</div>
 		</div>
 		<div className="flex flex-col h-full">
-			<button className='flex flex-grow justify-center items-center px-4 py-3 bg-blue-100 m-3 rounded-lg border-2 border-blue-800 text-lg font-bold'>Words</button>
-			<button className='flex flex-grow justify-center items-center px-4 py-3 bg-blue-100 m-3 rounded-lg border-2 border-blue-800 text-lg font-bold'>Words</button>
+			<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Words</Button>
+			<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Words</Button>
 		</div>
     </div>
   )
