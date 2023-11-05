@@ -9,12 +9,14 @@ function Translater() {
     {
       id: '1',
       name: 'Hull',
-      definition: "The main body of a ship or boat."
+      definition: "The main body of a ship or boat.",
+      phonetic: "həl"
 		},
     {
       id: '2',
       name: "Keel",
-      definition: "The bottom part of the hull that helps provide stability."
+      definition: "The bottom part of the hull that helps provide stability.",
+      phonetic: "kēl"
     }
   ]
 
