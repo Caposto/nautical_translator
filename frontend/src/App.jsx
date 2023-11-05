@@ -1,6 +1,7 @@
 import Simulator from './components/Simulator';
 import Navbar from './components/Navbar';
 import Translater from './components/Translater';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Simulator />
       <Translater />
+      <Footer />
     </div>
   )
 }
