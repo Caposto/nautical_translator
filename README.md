@@ -18,6 +18,8 @@ npm install
 npm run dev
 ```
 
+The website should now be running locally at http://localhost:5173/
+
 ## Main Features:
 - An interactive 3D display that let's the user highlight certain parts of a sailboat
 - A translation feature that outputs the definition of different nautical terms stored on a Kintone App
