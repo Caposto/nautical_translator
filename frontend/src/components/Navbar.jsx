@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <div className='bg-transparent w-screen h-24 flex flex-row items-center justify-between '>
 		<div className="pl-10">
-			<h1 className="text-4xl font-extrabold">Nauti Phrases</h1>
+			<h1 className="text-4xl font-extrabold">Nauti(cal) Phrases</h1>
 			<p className="text-sm font-normal">Shawn, Christian, Rumi, Justin</p>
 		</div> 
 		<div className="pr-10 flex flex-row"> 
