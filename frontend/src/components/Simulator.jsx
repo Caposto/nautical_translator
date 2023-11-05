@@ -6,19 +6,16 @@ import Ocean from './Ocean';
 import { Button } from "@material-tailwind/react";
 
 function Simulator() {
-	const [activeParts, setActiveParts] = useState(new Set());
+	const [activePart, setActivePart] = useState(null);
 
 	// Since sets are mutable have to add additional add/remove functions to update state
 	const editPart = part => {
-		console.log(part, activeParts, activeParts.has(part));
-		if (activeParts.has(part)) {
-			activeParts.clear();
-			setActiveParts(previousState => new Set([...previousState]));
+		if (activePart === part) {
+			setActivePart(null);
 			return;
 		}
-		activeParts.clear();
 		// turn off if the same part is clicked twice
-		setActiveParts(previousState => new Set([...previousState, part]));
+		setActivePart(part);
 	}
 
   return (
@@ -41,7 +38,7 @@ function Simulator() {
 					<OrbitControls minDistance={5} maxDistance={30} maxPolarAngle={Math.PI / 2 - 0.2} /> 
 					<ambientLight intensity={1} />
 					<directionalLight position={[0, 0, 5]} intensity={2} />
-					<Boat scale={0.01} scenePosition={[0, 0.5, 3]} activeParts={activeParts}/>
+					<Boat scale={0.01} scenePosition={[0, 0.5, 3]} activePart={activePart}/>
 					<Ocean />
 					<Sky scale = {1000} sunPosition = {[500,150,-1000]} turbidity={0.1} />
 				</Canvas>
