@@ -20,12 +20,12 @@ function DialogButton({ buttonText, content, modalTitle }) {
       </Button>
       <Dialog open={open} handler={handleOpen}>
         <DialogHeader>{modalTitle}</DialogHeader>
-        <DialogBody>
+        <DialogBody className="text-black">
           {content}
         </DialogBody>
         <DialogFooter>
-          <Button variant="gradient" color="blue" onClick={handleOpen}>
-            <span>Confirm</span>
+          <Button variant="gradient" color="primary" onClick={handleOpen}>
+            <span className="font-sans">Confirm</span>
           </Button>
         </DialogFooter>
       </Dialog>
