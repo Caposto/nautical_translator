@@ -8,7 +8,7 @@ export default function Boat({scale, scenePosition}) {
   const rotationInRadians = 90 * (Math.PI / 180)
 
   return (
-    <group ref={groupRef} position={scenePosition} rotation={[rotationInRadians, 0, 0]}>
+    <group ref={groupRef} position={scenePosition} rotation={[rotationInRadians, 0, rotationInRadians * 2]}>
       <BoatPart url='src/assets/Hull.glb' scale={scale} name="Hull" id="hull"/>
       <BoatPart url='src/assets/Keel.glb' scale={scale} name="Keel" id="keel"/>
       <BoatPart url='src/assets/Rudder.glb' scale={scale} name="Rudder" id="rudder"/>
