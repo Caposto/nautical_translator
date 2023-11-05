@@ -31,7 +31,7 @@ function Simulator() {
 			<div className='relative w-[675px] h-[500px] drop-shadow-2xl'> 
 				<div className='h-full'>
 				<Canvas camera={{
-					position: [0, 10, 18],
+					position: [0, 16, 30],
 					fov: 45,
 				}}>
 					<color attach="background" args={["#ececec"]}/>
