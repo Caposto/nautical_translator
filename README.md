@@ -35,9 +35,9 @@ The website should now be running locally at http://localhost:5173/
 [Figma Wireframes/Mockups](https://www.figma.com/file/30T0hq4FHU6iKN7LNjx2bR/Nautical-Boat-Simulator?type=design&node-id=0%3A1&mode=design&t=Styx0ozvdvjHkFBV-1)
 
 ## Resources
-[Setting up three.js, Tailwind, React in Vite](https://dev.to/saloship/base-setup-for-3-d-web-dev-30h5)
-[Kintone Quickstart](https://kintone.dev/en/quickstart/)
-![alt text](https://intlreg.org/wp-content/uploads/2019/10/048-port-starboard-left-right.jpg)
-[Water Shader](https://threejs.org/examples/webgl_water.html)
-[Ocean Water Shader](https://threejs.org/examples/webgl_shaders_ocean.html)
-[Different Parts of a Sailboat](https://www.boatsetter.com/boating-resources/parts-of-a-sailboat#:~:text=The%20basic%20sailing%20boat%20is,the%20backstay%2C%20and%20the%20forestay)
+- [Setting up three.js, Tailwind, React in Vite](https://dev.to/saloship/base-setup-for-3-d-web-dev-30h5)
+- [Kintone Quickstart](https://kintone.dev/en/quickstart/)
+- ![alt text](https://intlreg.org/wp-content/uploads/2019/10/048-port-starboard-left-right.jpg)
+- [Water Shader](https://threejs.org/examples/webgl_water.html)
+- [Ocean Water Shader](https://threejs.org/examples/webgl_shaders_ocean.html)
+- [Different Parts of a Sailboat](https://www.boatsetter.com/boating-resources/parts-of-a-sailboat#:~:text=The%20basic%20sailing%20boat%20is,the%20backstay%2C%20and%20the%20forestay)
