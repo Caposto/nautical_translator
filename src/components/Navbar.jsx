@@ -8,7 +8,7 @@ function Navbar() {
     <div className='bg-gradient-to-b from-blue-600 to-white w-screen h-24 flex flex-row items-center justify-between '>
 		<div className="pl-10">
 			<h1 className="text-3xl font-extrabold">Jib Jargon</h1>
-			<p className="text-sm font-normal">Shawn, Christian, Rumi</p>
+			<p className="text-sm font-normal">Shawn, Christian, Rumi, J-Hat</p>
 		</div> 
 		<div className="pr-10 flex flex-row"> 
 			{showInstructions && 

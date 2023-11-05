@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import BoatPart from "./BoatPart";
 
-// eslint-disable-next-line react/prop-types
 export default function Boat({scale, scenePosition, activeParts}) {
   const groupRef = useRef();
 

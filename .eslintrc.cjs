@@ -16,6 +16,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    "react/no-unknown-property": [0, { ignore: ["class"] }]
+    "react/no-unknown-property": [0, { ignore: ["class"] }],
+    "react/prop-types": [0],
   },
 }
