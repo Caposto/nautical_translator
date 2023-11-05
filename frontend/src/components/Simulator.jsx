@@ -51,7 +51,7 @@ function Simulator() {
 					fov: 45,
 				}}>
 					<color attach="background" args={["#ececec"]}/>
-					<OrbitControls minDistance={5} maxDistance={30} maxPolarAngle={Math.PI / 2 - 0.2} /> 
+					<OrbitControls minDistance={5} maxDistance={40} maxPolarAngle={Math.PI / 2 - 0.2} /> 
 					<ambientLight intensity={1} />
 					<directionalLight position={[0, 0, 5]} intensity={2} />
 					<Boat scale={0.01} scenePosition={[0, 0.5, 3]} activePart={activePart}/>
@@ -65,7 +65,6 @@ function Simulator() {
 				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setStartboardVisibilityFunc}>Starboard</Button>
 				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setSternVisibilityFunc}>Stern</Button>
 				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600' onClick={setPortVisibilityFunc}>Port</Button>
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Forward</Button>
 			</div>
 		</div>
   )
