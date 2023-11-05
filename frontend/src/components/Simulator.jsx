@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import { useState } from 'react';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Sky } from '@react-three/drei';
 import Boat from './Boat';
 import Ocean from './Ocean';
 import { Button } from "@material-tailwind/react";
@@ -41,6 +41,7 @@ function Simulator() {
 					<directionalLight position={[0, 0, 5]} intensity={2} />
 					<Boat scale={0.01} scenePosition={[0, 0.5, 3]} activeParts={activeParts}/>
 					<Ocean />
+					<Sky scale = {1000} sunPosition = {[500,150,-1000]} turbidity={0.1} />
 				</Canvas>
 				</div>
 			</div>
