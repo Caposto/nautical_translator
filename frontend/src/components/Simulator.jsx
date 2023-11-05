@@ -16,7 +16,7 @@ function Simulator() {
 
   return (
 		<div className="w-full h-[500px] my-4 flex items-center justify-center">
-			<div className="flex flex-col h-full justify-around">
+			<div className="flex flex-col h-full justify-around w-48">
 				<Button className='bg-blue-600 text-white flex-grow m-3 text-lg' onClick={() => editPart("hull")}>Hull</Button>
 				<Button className='bg-blue-600 text-white flex-grow m-3 text-lg' onClick={() => editPart("keel")}>Keel</Button>
 				<Button className='bg-blue-600 text-white flex-grow m-3 text-lg' onClick={() => editPart("rudder")}>Rudder</Button>
@@ -40,9 +40,11 @@ function Simulator() {
 				</Canvas>
 				</div>
 			</div>
-			<div className="flex flex-col h-full">
-				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Port</Button>
+			<div className="flex flex-col h-full w-48">
 				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Starboard</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Stern</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Port</Button>
+				<Button className='bg-white text-blue-600 flex-grow m-3 text-lg border-2 border-blue-600'>Forward</Button>
 			</div>
 		</div>
   )
