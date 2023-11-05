@@ -14,10 +14,10 @@ function Simulator() {
 				fov: 45,
 			}}>
 				<color attach="background" args={["#ececec"]}/>
-				<OrbitControls minDistance={5} maxDistance={20} maxPolarAngle={Math.PI / 2 - 0.1} /> 
+				<OrbitControls minDistance={5} maxDistance={30} maxPolarAngle={Math.PI / 2 - 0.1} /> 
 				<ambientLight intensity={1} />
 				<directionalLight position={[0, 0, 5]} intensity={2} />
-				<Boat scale={0.01} scenePosition={[0, 0.75, 3]}/>
+				<Boat scale={0.01} scenePosition={[0, 0.5, 3]}/>
 				<Ocean />
 			</Canvas>
 			</div>
