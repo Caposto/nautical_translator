@@ -4,6 +4,7 @@ import { OrbitControls, Sky } from '@react-three/drei';
 import Boat from './Boat';
 import Ocean from './Ocean';
 import { Button } from "@material-tailwind/react";
+import Sides from './Sides';
 
 function Simulator() {
 	const [activePart, setActivePart] = useState(null);
@@ -39,6 +40,7 @@ function Simulator() {
 					<ambientLight intensity={1} />
 					<directionalLight position={[0, 0, 5]} intensity={2} />
 					<Boat scale={0.01} scenePosition={[0, 0.5, 3]} activePart={activePart}/>
+					<Sides center={[0, 0.5, 3]}/>
 					<Ocean />
 					<Sky scale = {1000} sunPosition = {[500,150,-1000]} turbidity={0.1} />
 				</Canvas>
