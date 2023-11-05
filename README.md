@@ -36,6 +36,7 @@ The website should now be running locally at http://localhost:5173/
 
 ## Resources
 - [Setting up three.js, Tailwind, React in Vite](https://dev.to/saloship/base-setup-for-3-d-web-dev-30h5)
+- [Material UI Tailwind](https://www.material-tailwind.com/)
 - [Kintone Quickstart](https://kintone.dev/en/quickstart/)
 - ![alt text](https://intlreg.org/wp-content/uploads/2019/10/048-port-starboard-left-right.jpg)
 - [Water Shader](https://threejs.org/examples/webgl_water.html)
