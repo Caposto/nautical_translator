@@ -1,5 +1,9 @@
-# Nautical Translator
-A website that serves as an educational platform by providing an interactice display for learning different Nautical Terms. Hack NJIT 2023.
+# Nautical Translator 
+![Static Badge](https://img.shields.io/badge/Best_use_of_Kintone-blue?label=HackNJIT%202023%20WINNER&labelColor=gold&link=https%3A%2F%2Fdevpost.com%2Fsoftware%2Fjib-jargon)
+
+
+A website that serves as an educational platform by providing an interactice display for learning different Nautical Terms. Hack NJIT 2023!
+
 
 ## Setup
 1. Clone the repository
@@ -18,7 +22,7 @@ npm install
 npm run dev
 ```
 
-The website should now be running locally at http://localhost:5173/
+The website should now be running locally at `http://localhost:5173/`
 
 ## Main Features:
 - An interactive 3D display that let's the user highlight certain parts of a sailboat
@@ -38,7 +42,7 @@ The website should now be running locally at http://localhost:5173/
 - [Setting up three.js, Tailwind, React in Vite](https://dev.to/saloship/base-setup-for-3-d-web-dev-30h5)
 - [Material UI Tailwind](https://www.material-tailwind.com/)
 - [Kintone Quickstart](https://kintone.dev/en/quickstart/)
-- ![alt text](https://intlreg.org/wp-content/uploads/2019/10/048-port-starboard-left-right.jpg)
 - [Water Shader](https://threejs.org/examples/webgl_water.html)
 - [Ocean Water Shader](https://threejs.org/examples/webgl_shaders_ocean.html)
 - [Different Parts of a Sailboat](https://www.boatsetter.com/boating-resources/parts-of-a-sailboat#:~:text=The%20basic%20sailing%20boat%20is,the%20backstay%2C%20and%20the%20forestay)
+- ![Ship Directions](https://intlreg.org/wp-content/uploads/2019/10/048-port-starboard-left-right.jpg)
