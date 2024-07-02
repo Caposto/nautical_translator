@@ -2,7 +2,7 @@
 ![Static Badge](https://img.shields.io/badge/Best_use_of_Kintone-blue?label=HackNJIT%202023%20WINNER&labelColor=gold&link=https%3A%2F%2Fdevpost.com%2Fsoftware%2Fjib-jargon)
 
 
-A website that serves as an educational platform by providing an interactice display for learning different Nautical Terms. Hack NJIT 2023!
+A website that serves as an educational platform by providing an interactive display for learning different Nautical Terms. Hack NJIT 2023!
 
 
 ## Setup
